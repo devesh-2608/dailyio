@@ -1,0 +1,241 @@
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 70px; /* Standard height */
+  }
+  
+  
+  .navbar-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+  
+  
+  .navbar-logo a {
+    text-decoration: none;
+  }
+  
+  .navbar-logo h1 {
+    color: white;
+    font-size: 1.8em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    margin: 0;
+  }
+  
+  .navbar-logo h1 span {
+    color: #FFD93D;
+  }
+  
+  .navbar-links ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    margin: 0 20px;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .navbar-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #FFD93D;
+    transition: width 0.3s ease;
+  }
+  
+  .navbar-links a:hover::after {
+    width: 100%;
+  }
+  
+  .navbar-auth {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .navbar-welcome-message {
+    color: #555;
+    font-weight: 500;
+    font-size: 0.95em;
+    white-space: nowrap;
+  }
+  
+  .login-btn,
+  .signup-btn,
+  .logout-btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  
+  .login-btn {
+    background-color: #eef5ff;
+    color: #1A91DA;
+    border-color: #1A91DA;
+  }
+  
+  .login-btn:hover {
+    background-color: #1A91DA;
+    color: #fff;
+  }
+  
+  .signup-btn {
+    background-color: #1A91DA;
+    color: #fff;
+  }
+  
+  .signup-btn:hover {
+    background-color: #147ec1;
+    border-color: #147ec1;
+  }
+  
+  .logout-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border-color: #ff4d4d;
+  }
+  
+  .logout-btn:hover {
+    background-color: #cc0000;
+    border-color: #cc0000;
+  }
+  
+  .navbar-menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .hamburger {
+    width: 30px;
+    height: 20px;
+    position: relative;
+  }
+  
+  .hamburger span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  }
+  
+  .hamburger span:nth-child(1) {
+    top: 0px;
+  }
+  
+  .hamburger span:nth-child(2) {
+    top: 8px;
+  }
+  
+  .hamburger span:nth-child(3) {
+    top: 16px;
+  }
+  
+  .hamburger.active span:nth-child(1) {
+    top: 8px;
+    transform: rotate(45deg);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    top: 8px;
+    transform: rotate(-45deg);
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-container {
+      flex-wrap: wrap;
+    }
+  
+    .navbar-menu-icon {
+      display: block;
+      order: 3;
+    }
+  
+    .navbar-links {
+      order: 4;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+  
+    .navbar-links.active {
+      height: auto;
+      margin-top: 20px;
+    }
+  
+    .navbar-links ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar-links li {
+      margin: 10px 0;
+    }
+  
+    .navbar-auth {
+      order: 5;
+      width: 100%;
+      justify-content: center;
+      height: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+  
+    .navbar-auth.active {
+      height: auto;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .navbar-auth.active {
+      /* ... existing responsive styles ... */
+    }
+
+    .navbar-welcome-message {
+      margin-bottom: 15px;
+      font-size: 1.1em;
+    }
+  }

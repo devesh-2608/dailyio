@@ -1,0 +1,233 @@
+  /* Login.css */
+  .login-container {
+    background: linear-gradient(-45deg, #FF6B6B, #4ECDC4, #45B7D1, #96C93D);
+    background-size: 400% 400%;
+    min-height: 100vh;
+    padding: 20px 20px;
+    align-items: center;
+    justify-content: center;
+    animation: dashboardGradientBG 15s ease infinite;
+    display: flex;
+  }
+
+  @keyframes dashboardGradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .login-content {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .login-header h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
+
+  .login-header h1 span {
+    color: #FFD93D;
+  }
+
+  .login-subtitle {
+    color: white;
+    font-size: 1.4rem;
+    margin: 5px 0 0 0;
+    font-weight: 400;
+  }
+
+  .login-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .login-notification {
+    background-color: rgba(22, 160, 133, 0.1);
+    color: #16a085;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+    border: 1px solid rgba(22, 160, 133, 0.2);
+  }
+
+  .login-error {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #c0392b;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    width: 100%;
+    display: block;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .login-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .login-form-group label {
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+  }
+
+  .login-input {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+
+  .login-input:focus {
+    outline: none;
+    border-color: #45B7D1;
+  }
+
+  .login-form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+  }
+
+  .login-remember-me {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .login-forgot-password {
+    color: #45B7D1;
+    text-decoration: none;
+  }
+
+  .login-button {
+    background: linear-gradient(90deg, #45B7D1, #4ECDC4);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .login-divider {
+    position: relative;
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  .login-divider::before,
+  .login-divider::after {
+    content: "";
+    display: inline-block;
+    width: 45%;
+    height: 1px;
+    background: #ddd;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  .login-divider span {
+    display: inline-block;
+    padding: 0 10px;
+    color: #888;
+    font-size: 12px;
+  }
+
+  .login-social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .login-social-button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: white;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-google {
+    color: #333;
+  }
+
+  .login-facebook {
+    color: #1877F2;
+  }
+
+  .login-signup-link {
+    text-align: center;
+    margin-top: 5px;
+    color: #666;
+    font-size: 13px;
+  }
+
+  .login-signup-link a {
+    color: #45B7D1;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .back-home-btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #45B7D1;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .back-home-btn:hover {
+    color: #2C3E50;
+    text-decoration: underline;
+  }

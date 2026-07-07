@@ -1,0 +1,210 @@
+/* AboutUs.css - Aligned with Dashboard Theme */
+.aboutus-container {
+  background: linear-gradient(-45deg, #FF6B6B, #4ECDC4, #45B7D1, #96C93D);
+  background-size: 400% 400%;
+  animation: aboutusGradientBG 15s ease infinite;
+  min-height: 100vh;
+  padding: 80px 20px 40px 20px;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+@keyframes aboutusGradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.aboutus-content {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.aboutus-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.aboutus-header h1 {
+  font-size: 3em;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.aboutus-header h1 span {
+  color: #FFD93D; /* Yellow from dashboard */
+}
+
+.aboutus-subtitle {
+  font-size: 1.3em;
+  color: #fff;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.aboutus-card {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+  color: #333; /* Dark text for readability */
+}
+
+.aboutus-section-title {
+  font-size: 1.8em;
+  margin-bottom: 0.75rem;
+  color: #feffab; /* Blue from dashboard */
+  font-weight: 600;
+}
+
+.aboutus-divider {
+  height: 3px;
+  width: 50px;
+  background: #1A91DA;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.aboutus-text {
+  font-size: 1.05em;
+  line-height: 1.7;
+  color: #454545;
+}
+
+.aboutus-feature-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.aboutus-feature-item {
+  padding: 12px 0 12px 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  font-size: 1.05em;
+}
+
+.aboutus-feature-item:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #1A91DA;
+  font-weight: 700;
+}
+.aboutus-feature-item:last-child {
+  border-bottom: none;
+}
+
+.aboutus-contributors-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.aboutus-contributor-card {
+  background: linear-gradient(135deg, #6CD0FF 0%, #1A91DA 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.aboutus-contributor-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(26, 145, 218, 0.4);
+}
+
+.aboutus-contributor-name {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.aboutus-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #888;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.2s;
+}
+.aboutus-modal-close:hover {
+  color: #1A91DA;
+}
+.aboutus-modal {
+  position: relative; /* Add this if not present */
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+  .aboutus-header h1 {
+    font-size: 2.5em;
+  }
+  .aboutus-card {
+    padding: 1.5rem;
+  }
+}
+
+.aboutus-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.aboutus-modal {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.25);
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90vw;
+  max-height: 80vh;
+  min-width: 260px;
+  min-height: 220px;
+  animation: fadeIn 0.2s;
+}
+
+.aboutus-modal-img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+
+.aboutus-modal-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  margin-top: 4px;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

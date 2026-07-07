@@ -1,0 +1,102 @@
+.todo-page {
+    background: linear-gradient(-45deg, #FF6B6B, #4ECDC4, #45B7D1, #96C93D);
+    background-size: 400% 400%;
+    min-height: 100vh;
+    padding: 20px;
+    animation: todoGradientBG 15s ease infinite;
+}
+
+@keyframes todoGradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.todo-container {
+    max-width: 600px;
+    margin: 100px auto 0;
+    padding-top: 20px;
+}
+
+.todo-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+.todo-header {
+    text-align: center;
+    color: #2C3E50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #E0E0E0;
+    padding-bottom: 10px;
+}
+
+.todo-input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #E0E0E0;
+    border-radius: 12px;
+    font-size: 16px;
+    background: rgba(255,255,255,0.9);
+}
+
+.todo-input:focus {
+    outline: none;
+    border-color: #FFD93D;
+    box-shadow: 0 0 15px rgba(255,217,61,0.2);
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: #2C3E50;
+}
+
+.todo-item.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.todo-item:hover {
+    transform: translateX(10px);
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.todo-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.todo-complete-btn {
+    background: #4BFF6D;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.todo-delete-btn {
+    background: #FF4B4B;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}

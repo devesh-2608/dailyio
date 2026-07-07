@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.home-page {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, rgba(204, 119, 34, 1), rgba(243, 213, 91, 1));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.home-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.home-landing-container {
+    text-align: center;
+    background-color: rgba(250, 215, 160, 1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    width: 400px;
+    animation: home-fadeInScale 1s forwards;
+    opacity: 0;
+}
+
+.home-logo {
+    width: 300px;
+    height: 300px;
+    background-image: url('../public/logo2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto 20px;
+    animation: home-fadeInUp 1s forwards;
+    opacity: 0;
+    transition: transform 0.3s ease;
+}
+.home-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.home-auth-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.home-button-row {
+    display: flex;
+    gap: 20px;
+}
+
+.home-btn {
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration:none;
+}
+
+.home-btn:hover {
+    background-color: #5a5a5a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+@keyframes home-fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes home-fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
